@@ -1,1 +1,1 @@
-# Ollama-Gemma-2b-Question-Answering-APP-About-Dogs
+# Ollama-Gemma-2b-Question-Answering-APP-About-General-Knowledge
