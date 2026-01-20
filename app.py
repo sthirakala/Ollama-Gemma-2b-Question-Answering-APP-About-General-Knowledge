@@ -17,7 +17,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS 
 
-loader = WebBaseLoader("https://www.natgeokids.com/uk/discover/animals/general-animals/dog-facts/")
+loader = WebBaseLoader("https://en.wikipedia.org/wiki/Main_Page")
 docs = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -35,7 +35,7 @@ llm = Ollama(model="gemma:2b")
 output_parser = StrOutputParser()
 chain = prompt_template | llm | output_parser
 
-st.title("Gemma:2b Question Answering App About Dogs")
+st.title("Gemma:2b Question Answering App About General Knowledge")
 input_text = st.text_input("Ask your question:")
 
 if input_text:
